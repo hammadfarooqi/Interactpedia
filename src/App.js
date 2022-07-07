@@ -1,6 +1,5 @@
 import './App.css';
-import {makeStyles} from "@material-ui/core/styles"
-import {Grid, Paper} from "@material-ui/core"
+import {Grid} from "@mui/material"
 
 function App() {
   return (
