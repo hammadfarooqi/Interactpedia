@@ -15,10 +15,10 @@ function App() {
           <TextDisplay title="Text" />
         </Grid>
         <Grid item sm={4} md={4} lg={4}>
-          <TextDisplay title="Question" />
+          <Header title="Question" />
         </Grid>
         <Grid item sm={3} md={3} lg={3}>
-          <TextDisplay title="Quiz" />
+          <Header title="Quiz" />
         </Grid>
       </Grid>
     </div>

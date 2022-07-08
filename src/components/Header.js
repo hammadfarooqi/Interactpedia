@@ -8,7 +8,6 @@ const Header = ( { title } ) => {
         <CardHeader 
           title = {title}
         />
-        
       </Card>
     </div>
   )
