@@ -1,4 +1,4 @@
-import { Card, FormControl, FormLabel, CardHeader, FormControlLabel, CardContent, Radio, RadioGroup, Grid } from "@mui/material"
+import { Card, FormControl, FormLabel, CardHeader, FormControlLabel, CardContent, Radio, RadioGroup, Grid, Button } from "@mui/material"
 
 const Question = ({title}) => {
   return (
@@ -8,7 +8,7 @@ const Question = ({title}) => {
           title = {title}
         />
         <CardContent>
-          <FormControl>
+          <FormControl onSubmit="">
             <FormLabel id="demo-radio-buttons-group-label">Answer Options</FormLabel>
             <RadioGroup
               aria-labelledby="demo-radio-buttons-group-label"
@@ -26,6 +26,11 @@ const Question = ({title}) => {
               </Grid>
             </RadioGroup>
           </FormControl>
+          <Grid xs={12}>
+            <Button variant="outlined">
+              Submit
+            </Button>
+          </Grid>
         </CardContent>
       </Card>
     </div>
