@@ -1,6 +1,7 @@
 import './App.css';
 import {Grid} from "@mui/material"
 import TextDisplay from "./components/TextDisplay"
+import Question from "./components/Question"
 import Header from "./components/Header"
 
 function App() {
@@ -15,7 +16,7 @@ function App() {
           <TextDisplay title="Text" />
         </Grid>
         <Grid item sm={4} md={4} lg={4}>
-          <Header title="Question" />
+          <Question title="Question" />
         </Grid>
         <Grid item sm={3} md={3} lg={3}>
           <Header title="Quiz" />
