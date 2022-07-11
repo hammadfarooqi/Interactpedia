@@ -67,6 +67,7 @@ function App() {
         </Grid>
         <Grid item sm={4} md={4} lg={4}>
           <Question title="Question" />
+          <Question title="Question" />
         </Grid>
         <Grid item sm={3} md={3} lg={3}>
           <Header title="Quiz" />
