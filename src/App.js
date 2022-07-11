@@ -8,19 +8,38 @@ import raw from "./article.txt"
 
 function App() {
 
+  const [title, setTitle] = useState("")
   const [parsed, setParsed] = useState([])
+  // const [topics, setTopics] = useState([
+  //   {
+  //     topic: "Aviation",
+  //     answered: 0,
+  //     correct: 0
+  //   },
+  //   {
+  //     topic: "",
+  //     answered: 0,
+  //     correct: 0
+  //   },
+  //   {
+  //     topic: "",
+  //     answered: 0,
+  //     correct: 0
+  //   }
+  // ])
 
   fetch(raw)
   .then(r => r.text())
   .then(text => {
-    setParsed(text.split("\n"));
+    setTitle(text.split("\n")[0])
+    setParsed(text.split("\n").splice(1));
   });
 
   return (
     <div className="App">
       <Grid container padding={2} spacing = {5}>
         <Grid item sm={12} md={12} lg={12}>
-          <Header title="Title of Article!"/>
+          <Header title={title}/>
         </Grid>
         
         <Grid item sm={5} md={5} lg={5}>
