@@ -1,4 +1,5 @@
-import { Card, FormControl, FormLabel, CardHeader, FormControlLabel, CardContent, Radio, RadioGroup, Grid, Button } from "@mui/material"
+import { Card, FormControl, FormLabel, CardHeader, FormControlLabel, CardContent, Radio, RadioGroup, Grid, Button, Icon} from "@mui/material"
+// import { Cancel, CheckCircle } from "@mui/icons-material"
 import { useState } from "react"
 
 // test 2
@@ -13,8 +14,8 @@ const Question = ({title}) => {
           title = {title}
         />
         <CardContent>
-          <FormControl onSubmit="">
-            <FormLabel id="demo-radio-buttons-group-label">Answer Options</FormLabel>
+          <FormControl>
+            <FormLabel id="answer-choice">Answer Options</FormLabel>
 
             <RadioGroup
               aria-labelledby="demo-radio-buttons-group-label"
@@ -37,9 +38,18 @@ const Question = ({title}) => {
 
           </FormControl>
           <Grid xs={12}>
-            <Button type="submit" variant="outlined" onClick = {() => console.log(category)}>
+            <Button type="submit" variant="outlined" onClick = {() =>  console.log(category)}>
               Submit
             </Button>
+
+            {/* <CheckCircle>
+             sx={{ color: success}}
+            </CheckCircleIcon>
+
+            <Cancel>
+              sx={{ color: error }}
+            </CancelIcon> */}
+
           </Grid>
         </CardContent>
       </Card>
