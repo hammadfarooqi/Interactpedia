@@ -1,19 +1,69 @@
-import './App.css';
+import './App.css'
+import {useState } from "react"
 import {Grid} from "@mui/material"
 import TextDisplay from "./components/TextDisplay"
 import Question from "./components/Question"
 import Header from "./components/Header"
+import raw from "./article.txt"
 
 function App() {
+
+  const [title, setTitle] = useState("")
+  const [parsed, setParsed] = useState([])
+  // const [topics, setTopics] = useState([
+  //   {
+  //     topic: "Aviation",
+  //     answered: 0,
+  //     correct: 0
+  //   },
+  //   {
+  //     topic: "",
+  //     answered: 0,
+  //     correct: 0
+  //   },
+  //   {
+  //     topic: "",
+  //     answered: 0,
+  //     correct: 0
+  //   }
+  // ])
+
+  fetch(raw)
+  .then(r => r.text())
+  .then(text => {
+    setTitle(text.split("\n")[0])
+    setParsed(text.split("\n").splice(1));
+  });
+
   return (
     <div className="App">
       <Grid container padding={2} spacing = {5}>
         <Grid item sm={12} md={12} lg={12}>
-          <Header title="Title of Article!"/>
+          <Header title={title}/>
         </Grid>
         
         <Grid item sm={5} md={5} lg={5}>
-          <TextDisplay title="Text" />
+          <Grid container spacing = {2}>
+            {parsed.map((paragraph) => (
+
+              paragraph.includes(".") ?
+
+              <Grid item sm={12} md={12} lg={12}>
+                <TextDisplay 
+                  text={paragraph}
+                />
+              </Grid>
+
+              :
+
+              <Grid item sm={12} md={12} lg={12}>
+                <Header title={paragraph} />
+              </Grid>
+
+            )
+            )}
+
+          </Grid>
         </Grid>
         <Grid item sm={4} md={4} lg={4}>
           <Question title="Question" />
