@@ -2,7 +2,7 @@ import './App.css'
 import {useState } from "react"
 import {Grid} from "@mui/material"
 import TextDisplay from "./components/TextDisplay"
-import Question from "./components/Question"
+import Quiz from "./components/Quiz"
 import Header from "./components/Header"
 import raw from "./article.txt"
 
@@ -42,7 +42,7 @@ function App() {
           <Header title={title}/>
         </Grid>
         
-        <Grid item sm={5} md={5} lg={5}>
+        <Grid item sm={8} md={8} lg={8}>
           <Grid container spacing = {2}>
             {parsed.map((paragraph) => (
 
@@ -66,11 +66,7 @@ function App() {
           </Grid>
         </Grid>
         <Grid item sm={4} md={4} lg={4}>
-          <Question title="Question" />
-          <Question title="Question" />
-        </Grid>
-        <Grid item sm={3} md={3} lg={3}>
-          <Header title="Quiz" />
+          <Quiz/>
         </Grid>
       </Grid>
     </div>
