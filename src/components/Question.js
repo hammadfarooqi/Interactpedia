@@ -18,7 +18,7 @@ const Question = ({prompt, answers, correct, topic}) => {
           title = {prompt}
         />
         <CardContent>
-          <FormControl>
+          <FormControl >
             <FormLabel id="answer-choice">Answer Options</FormLabel>
 
             <RadioGroup
@@ -42,7 +42,7 @@ const Question = ({prompt, answers, correct, topic}) => {
 
           </FormControl>
           <Grid xs={12}>
-            <Button type="submit" variant="outlined" onClick = {() =>  console.log(category)}>
+            <Button type="submit" variant="outlined" onClick = {({correct}) => (category==correct) ? console.log(category):console.log(category)}>
               Submit
             </Button>
 
