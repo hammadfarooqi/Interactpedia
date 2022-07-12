@@ -29,6 +29,7 @@ function validate(correct, category, setIsCorrect) {
 const Question = ({prompt, answers, correct, topic}) => {
   const [category, setCategory] = useState('A')
   const [isCorrect, setIsCorrect] = useState(-1)
+  const [show, setShow] = useState(false);
   return (
     <div>
       <Card>
@@ -69,7 +70,8 @@ const Question = ({prompt, answers, correct, topic}) => {
       </Card>
       {isCorrect === 1 && <CheckCircleIcon sx={{ color: green[500], fontSize: 200 }}/>}
       {isCorrect === 0 && <CancelIcon sx={{ color: red[500], fontSize: 200 }}/>}
-      <Button variant="text" onClick =  {()=> Hint(topic)}>Hint</Button>
+      <Button variant="text" onClick =  {() => setShow(prev => !prev)}>Hint</Button>
+      {show && <Box id='hint'>Section to Read: {topic}</Box>}
     </div>
   )
 }
