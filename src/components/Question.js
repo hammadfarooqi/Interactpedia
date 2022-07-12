@@ -74,7 +74,7 @@ const Question = ({prompt, answers, correct, topic}) => {
           {isCorrect === 0 && <CancelIcon sx={{ color: red[500], fontSize: 200 }}/>}
         </Grid>
         <Button variant="text" onClick =  {() => setShow(prev => !prev)}>Hint</Button>
-        {show && <Box id='hint'>Section to Read: {topic}</Box>}
+        {show && <Box sx={{margin:2}} id='hint'>Section to Read: {topic}</Box>}
         <Grid xs={12}>
           {isCorrect === 1 && <Button variant="contained" onClick={()=> setPassed(true)} sx={{margin: 2}} >Next Question </Button>}
         </Grid>
