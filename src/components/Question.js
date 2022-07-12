@@ -1,17 +1,17 @@
-import { Card, FormControl, FormLabel, CardHeader, FormControlLabel, CardContent, Radio, RadioGroup, Grid, Button, Icon} from "@mui/material"
+import { Card, FormControl, FormLabel, CardHeader, FormControlLabel, CardContent, Radio, RadioGroup, Grid, Button} from "@mui/material"
 // import { Cancel, CheckCircle } from "@mui/icons-material"
 import { useState } from "react"
 
 // test 2
 
 
-const Question = ({title}) => {
+const Question = ({prompt, answers, correct, topic}) => {
   const [category, setCategory] = useState('A')
   return (
     <div>
       <Card>
         <CardHeader 
-          title = {title}
+          title = {prompt}
         />
         <CardContent>
           <FormControl>
