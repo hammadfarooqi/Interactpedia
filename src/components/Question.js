@@ -1,4 +1,4 @@
-import { Card, FormControl, FormLabel, CardHeader, FormControlLabel, CardContent, Radio, RadioGroup, Grid, Button, Spacing} from "@mui/material"
+import { Card, FormControl, FormLabel, CardHeader, FormControlLabel, CardContent, Radio, RadioGroup, Grid, Button} from "@mui/material"
 import CheckCircleIcon from '@mui/icons-material/CheckCircle';
 import CancelIcon from '@mui/icons-material/Cancel';
 import { useState } from "react"
@@ -7,9 +7,6 @@ import Box from '@mui/material/Box';
 import win from '../Audio/win.mp3';
 import lose from '../Audio/lose.mp3';
 
-
-
-// test 2
 function validate(correctAnswer, category, setIsCorrect, topic, topics, setTopics) {
   if (correctAnswer === category){
     setIsCorrect(1)
@@ -89,9 +86,9 @@ const Question = ({prompt, answers, correct, topic, topics, setTopics, nextQuest
         {isCorrect === -1 && <Button variant="text" onClick =  {() => setShowHint(prev => !prev)}>Hint</Button>}
         {showHint && <Box sx={{margin:2}} id='hint'>Section to Read: {topic}</Box>}
         <Grid xs={12}>
-          {isCorrect === 1 && <CheckCircleIcon sx={{ color: green[500], fontSize: 200}} />}
+          {isCorrect === 1 && <CheckCircleIcon sx={{ color: green[500], fontSize: 100}} />}
           {isCorrect === 1 && <audio  autoplay="true"><source src={win} type="audio/mpeg"/></audio>}
-          {isCorrect === 0 && <CancelIcon sx={{ color: red[500], fontSize: 200 }}/>}
+          {isCorrect === 0 && <CancelIcon sx={{ color: red[500], fontSize: 100 }}/>}
           {isCorrect === 0 && <audio  autoplay="true"><source src={lose} type="audio/mpeg"/></audio>}
         </Grid>
         {isCorrect === 0 && 

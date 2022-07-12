@@ -39,33 +39,29 @@ function App() {
 
   return (
     <div className="App">
-      <Grid container padding={2} spacing = {5}>
+      <Grid container padding={1} spacing = {1}>
         <Grid item sm={12} md={12} lg={12}>
-          <Header title={title}/>
+          <Header title={title} isTitle={true}/>
         </Grid>
         
         <Grid item sm={8} md={8} lg={8}>
-          <Grid container spacing = {2}>
-            {parsed.map((paragraph) => (
+          <div style={{height:'75vh', overflow:'auto', padding:10}}>
+            <Grid container spacing = {2}>
+              {parsed.map((paragraph) => (
+                paragraph.includes(".") ?
+                <Grid item sm={12} md={12} lg={12}>
+                  <TextDisplay 
+                    text={paragraph}
+                  />
+                </Grid> :
+                <Grid item sm={12} md={12} lg={12}>
+                  <Header title={paragraph} />
+                </Grid>
+              )
+              )}
 
-              paragraph.includes(".") ?
-
-              <Grid item sm={12} md={12} lg={12}>
-                <TextDisplay 
-                  text={paragraph}
-                />
-              </Grid>
-
-              :
-
-              <Grid item sm={12} md={12} lg={12}>
-                <Header title={paragraph} />
-              </Grid>
-
-            )
-            )}
-
-          </Grid>
+            </Grid>
+          </div>
         </Grid>
         <Grid item sm={4} md={4} lg={4}>
           <Quiz 
