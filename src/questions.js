@@ -8,7 +8,7 @@ export const qs = [
     },
     {
         prompt: "Much of the airplane systems relies on what type of transmissions?",
-        answers: ["Radio", "Infrared", "Ultrasonic", "Radar"],
+        answers: ["A. Radio", "B. Infrared", "C. Ultrasonic", "D. Radar"],
         correct: 'A',
         topic: "Aviation",
         index: 1
