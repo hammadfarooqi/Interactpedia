@@ -41,22 +41,42 @@ const Question = ({prompt, answers, correct, topic, topics, setTopics, nextQuest
               name="radio-buttons-group"
               value = {category}
               onChange = {(e)=>setCategory(e.target.value)}>
-              <Grid container={0} align = "center" direction="column" justify="center">
-                <Grid item xs={6}>
-                  <FormControlLabel value="A" control={<Radio />} label={answers[0]} />
-                  <FormControlLabel value="C" control={<Radio />} label={answers[2]} />
+              {/* <Grid container={0} align = "center" direction="column" justify="center"> */}
+              <Grid container>
+                <Grid item xs={6} sm={6} md={6} lg={6}>
+                  <Card>
+                    <CardContent>
+                      <FormControlLabel value="A" control={<Radio />} label={answers[0]} />
+                    </CardContent>
+                  </Card>
                 </Grid>
-
-                <Grid item xs={6}>
-                  <FormControlLabel value="B" control={<Radio />} label={answers[1]} />
-                  <FormControlLabel value="D" control={<Radio />} label={answers[3]} />
+                <Grid item xs={6} sm={6} md={6} lg={6}>
+                  <Card>
+                    <CardContent>
+                      <FormControlLabel value="B" control={<Radio />} label={answers[1]} />
+                    </CardContent>
+                  </Card>
+                </Grid>
+                <Grid item xs={6} sm={6} md={6} lg={6}>
+                  <Card>
+                    <CardContent>
+                      <FormControlLabel value="C" control={<Radio />} label={answers[2]} />
+                    </CardContent>
+                  </Card>
+                </Grid>
+                <Grid item xs={6} sm={6} md={6} lg={6}>
+                  <Card>
+                    <CardContent>
+                      <FormControlLabel value="D" control={<Radio />} label={answers[3]} />
+                    </CardContent>
+                  </Card>
                 </Grid>
               </Grid>
             </RadioGroup>
-
           </FormControl>
+
           <Grid xs={12}>
-            {isCorrect === -1 && <Button type="submit" variant="outlined" onClick = {() => validate(correct, category, setIsCorrect, topic, topics, setTopics)}>
+            {isCorrect === -1 && <Button type="submit" variant="outlined" style={{margin:15}} onClick = {() => validate(correct, category, setIsCorrect, topic, topics, setTopics)}>
               Submit
             </Button>}
 
