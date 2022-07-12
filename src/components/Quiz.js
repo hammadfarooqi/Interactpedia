@@ -3,6 +3,16 @@ import Header from "./Header"
 import {Grid} from "@mui/material"
 import { useState } from "react"
 
+function nextQs(qs,questions, Passed) {
+  for (let i = 0; Passed==true; i++) {
+    console.log(questions[i])
+    qs.push(<Question prompt={questions[i].prompt} answers={questions[i].answers} correct={questions[i].correct} topic={questions[i].topic}/>)
+    return(
+      <Question prompt={questions[i].prompt} answers={questions[i].answers} correct={questions[i].correct} topic={questions[i].topic}/>
+    )
+  }
+}
+
 const Quiz = ({questions}) => {
     const [question, setQuestion] = useState(0)
 

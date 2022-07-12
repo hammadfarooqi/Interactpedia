@@ -1,7 +1,7 @@
 export const qs = [
     {
         prompt: "When is controlling aircrafts especially dangerous because of short radar surveillance ranges?",
-        answers: ["At high altitudes", "At low altitudes", "Over the ocean", "Near mountains"],
+        answers: ["A. At high altitudes", "B. At low altitudes", "C. Over the ocean", "D. Near mountains"],
         correct: 'C',
         topic: "Aviation"
     },
