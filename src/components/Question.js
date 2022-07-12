@@ -9,27 +9,22 @@ import { typography } from '@mui/system';
 
 
 // test 2
-function validate(correct, category, setIsCorrect) {
-  console.log(category, correct)
-  if (correct === category){
+function validate(correctAnswer, category, setIsCorrect, topic, topics, setTopics) {
+  if (correctAnswer === category){
     setIsCorrect(1)
-    // document.getElementById("answer-choice").style.display = "none";
-    // return 
-    // <CheckCircleIcon sx={{ color: green[500], fontSize: 200 }}/>
+    setTopics(topics.map((choice) => topic === choice.topic ? {...choice, answered: choice.answered+1, correct: choice.correct+1} : choice))
   }
   else{
     setIsCorrect(0)
-    // document.getElementById("answer-choice").style.display = "none";
-    // return <CancelIcon sx={{ color: red[500], fontSize: 200 }}/>
+    setTopics(topics.map((choice) => topic === choice.topic ? {...choice, answered: choice.answered+1} : choice))
   }
 }
 
 
-const Question = ({prompt, answers, correct, topic}) => {
+const Question = ({prompt, answers, correct, topic, topics, setTopics, nextQuestion, questions, current, setCurrent}) => {
   const [category, setCategory] = useState('A')
   const [isCorrect, setIsCorrect] = useState(-1)
-  const [show, setShow] = useState(false);
-  const [passed, setPassed] = useState(false);
+  const [showHint, setShowHint] = useState(false);
   return (
     <div>
       <Card>
@@ -46,37 +41,62 @@ const Question = ({prompt, answers, correct, topic}) => {
               name="radio-buttons-group"
               value = {category}
               onChange = {(e)=>setCategory(e.target.value)}>
-              <Grid container={0} align = "center" direction="column" justify="center">
-                <Grid item xs={6}>
-                  <FormControlLabel value="A" control={<Radio />} label={answers[0]} />
-                  <FormControlLabel value="C" control={<Radio />} label={answers[2]} />
+              {/* <Grid container={0} align = "center" direction="column" justify="center"> */}
+              <Grid container>
+                <Grid item xs={6} sm={6} md={6} lg={6}>
+                  <Card>
+                    <CardContent>
+                      <FormControlLabel value="A" control={<Radio />} label={answers[0]} />
+                    </CardContent>
+                  </Card>
                 </Grid>
-
-                <Grid item xs={6}>
-                  <FormControlLabel value="B" control={<Radio />} label={answers[1]} />
-                  <FormControlLabel value="D" control={<Radio />} label={answers[3]} />
+                <Grid item xs={6} sm={6} md={6} lg={6}>
+                  <Card>
+                    <CardContent>
+                      <FormControlLabel value="B" control={<Radio />} label={answers[1]} />
+                    </CardContent>
+                  </Card>
+                </Grid>
+                <Grid item xs={6} sm={6} md={6} lg={6}>
+                  <Card>
+                    <CardContent>
+                      <FormControlLabel value="C" control={<Radio />} label={answers[2]} />
+                    </CardContent>
+                  </Card>
+                </Grid>
+                <Grid item xs={6} sm={6} md={6} lg={6}>
+                  <Card>
+                    <CardContent>
+                      <FormControlLabel value="D" control={<Radio />} label={answers[3]} />
+                    </CardContent>
+                  </Card>
                 </Grid>
               </Grid>
             </RadioGroup>
-
           </FormControl>
+
           <Grid xs={12}>
-            <Button type="submit" variant="outlined" onClick = {() => validate(correct, category, setIsCorrect)}>
+            {isCorrect === -1 && <Button type="submit" variant="outlined" style={{margin:15}} onClick = {() => validate(correct, category, setIsCorrect, topic, topics, setTopics)}>
               Submit
-            </Button>
+            </Button>}
 
           </Grid>
         </CardContent>
       </Card>
       <Card>
+        {isCorrect === -1 && <Button variant="text" onClick =  {() => setShowHint(prev => !prev)}>Hint</Button>}
+        {showHint && <Box sx={{margin:2}} id='hint'>Section to Read: {topic}</Box>}
         <Grid xs={12}>
           {isCorrect === 1 && <CheckCircleIcon sx={{ color: green[500], fontSize: 200}} />}
           {isCorrect === 0 && <CancelIcon sx={{ color: red[500], fontSize: 200 }}/>}
         </Grid>
-        <Button variant="text" onClick =  {() => setShow(prev => !prev)}>Hint</Button>
-        {show && <Box sx={{margin:2}} id='hint'>Section to Read: {topic}</Box>}
+        {isCorrect === 0 && 
+          <CardContent>
+            The correct answer is {correct}
+          </CardContent>
+        }
         <Grid xs={12}>
-          {isCorrect === 1 && <Button variant="contained" onClick={()=> setPassed(true)} sx={{margin: 2}} >Next Question </Button>}
+          {isCorrect !== -1 && <Button variant="contained" onClick={()=> nextQuestion(questions, current, setCurrent, topics, setIsCorrect)} sx={{margin: 2}} >Next Question </Button>}
         </Grid>
       </Card>
     </div>
