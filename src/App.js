@@ -5,28 +5,12 @@ import TextDisplay from "./components/TextDisplay"
 import Quiz from "./components/Quiz"
 import Header from "./components/Header"
 import raw from "./article.txt"
+import {qs} from "./questions.js"
 
 function App() {
 
   const [title, setTitle] = useState("")
   const [parsed, setParsed] = useState([])
-  // const [topics, setTopics] = useState([
-  //   {
-  //     topic: "Aviation",
-  //     answered: 0,
-  //     correct: 0
-  //   },
-  //   {
-  //     topic: "",
-  //     answered: 0,
-  //     correct: 0
-  //   },
-  //   {
-  //     topic: "",
-  //     answered: 0,
-  //     correct: 0
-  //   }
-  // ])
 
   fetch(raw)
   .then(r => r.text())
@@ -34,6 +18,7 @@ function App() {
     setTitle(text.split("\n")[0])
     setParsed(text.split("\n").splice(1));
   });
+
 
   return (
     <div className="App">
@@ -66,7 +51,7 @@ function App() {
           </Grid>
         </Grid>
         <Grid item sm={4} md={4} lg={4}>
-          <Quiz/>
+          <Quiz questions={qs}/>
         </Grid>
       </Grid>
     </div>

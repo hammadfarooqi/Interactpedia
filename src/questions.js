@@ -1,4 +1,4 @@
-questions = [
+export const qs = [
     {
         prompt: "When is controlling aircrafts especially dangerous because of short radar surveillance ranges?",
         answers: ["At high altitudes", "At low altitudes", "Over the ocean", "Near mountains"],

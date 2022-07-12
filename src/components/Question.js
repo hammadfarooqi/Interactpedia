@@ -9,13 +9,13 @@ import { red, green } from "@mui/material/colors";
 // test 2
 
 
-const Question = ({title}) => {
+const Question = ({prompt, answers, correct, topic}) => {
   const [category, setCategory] = useState('A')
   return (
     <div>
       <Card>
         <CardHeader 
-          title = {title}
+          title = {prompt}
         />
         <CardContent>
           <FormControl>
