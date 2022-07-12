@@ -8,6 +8,7 @@ import { red, green } from "@mui/material/colors";
 
 // test 2
 function validate(correct, category, setIsCorrect) {
+  console.log(category, correct)
   if (correct === category){
     setIsCorrect(1)
     // document.getElementById("answer-choice").style.display = "none";
@@ -56,7 +57,7 @@ const Question = ({prompt, answers, correct, topic}) => {
 
           </FormControl>
           <Grid xs={12}>
-            <Button type="submit" variant="outlined" onClick = {(correct, category) => validate(correct, category, setIsCorrect)}>
+            <Button type="submit" variant="outlined" onClick = {() => validate(correct, category, setIsCorrect)}>
               Submit
             </Button>
 
