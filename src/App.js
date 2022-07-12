@@ -11,6 +11,23 @@ function App() {
 
   const [title, setTitle] = useState("")
   const [parsed, setParsed] = useState([])
+  const [topics, setTopics] = useState([
+    {
+      topic: "Aviation",
+      answered: 0,
+      correct: 0
+    },
+    {
+      topic: "Automobiles",
+      answered: 0,
+      correct: 0
+    },
+    {
+      topic: "Internet of things and physical vulnerabilities",
+      answered: 0,
+      correct: 0
+    }
+  ])
 
   fetch(raw)
   .then(r => r.text())
@@ -51,7 +68,7 @@ function App() {
           </Grid>
         </Grid>
         <Grid item sm={4} md={4} lg={4}>
-          <Quiz questions={qs}/>
+          <Quiz questions={qs} topics={topics}/>
         </Grid>
       </Grid>
     </div>
