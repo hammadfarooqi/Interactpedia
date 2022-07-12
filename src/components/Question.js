@@ -1,6 +1,10 @@
 import { Card, FormControl, FormLabel, CardHeader, FormControlLabel, CardContent, Radio, RadioGroup, Grid, Button, Icon} from "@mui/material"
-// import { Cancel, CheckCircle } from "@mui/icons-material"
+import CheckCircleIcon from '@mui/icons-material/CheckCircle';
+import CancelIcon from '@mui/icons-material/Cancel';
 import { useState } from "react"
+import { red, green } from "@mui/material/colors";
+
+
 
 // test 2
 
@@ -42,13 +46,13 @@ const Question = ({title}) => {
               Submit
             </Button>
 
-            {/* <CheckCircle>
-             sx={{ color: success}}
+            <CheckCircleIcon sx={{ color: green[500], fontSize: 200 }}>
+             
             </CheckCircleIcon>
 
-            <Cancel>
-              sx={{ color: error }}
-            </CancelIcon> */}
+            <CancelIcon sx={{ color: red[500], fontSize: 200 }}>
+              
+            </CancelIcon> 
 
           </Grid>
         </CardContent>
@@ -56,7 +60,5 @@ const Question = ({title}) => {
     </div>
   )
 }
-
-// branch hammad display text 
 
 export default Question
