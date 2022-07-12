@@ -21,7 +21,7 @@ function validate(correctAnswer, category, setIsCorrect, topic, topics, setTopic
 }
 
 
-const Question = ({prompt, answers, correct, topic, topics, setTopics}) => {
+const Question = ({prompt, answers, correct, topic, topics, setTopics, nextQuestion, questions, current, setCurrent}) => {
   const [category, setCategory] = useState('A')
   const [isCorrect, setIsCorrect] = useState(-1)
   const [showHint, setShowHint] = useState(false);
@@ -76,7 +76,7 @@ const Question = ({prompt, answers, correct, topic, topics, setTopics}) => {
           </CardContent>
         }
         <Grid xs={12}>
-          {isCorrect !== -1 && <Button variant="contained" onClick={()=> console.log(topics)} sx={{margin: 2}} >Next Question </Button>}
+          {isCorrect !== -1 && <Button variant="contained" onClick={()=> nextQuestion(questions, current, setCurrent, topics, setIsCorrect)} sx={{margin: 2}} >Next Question </Button>}
         </Grid>
       </Card>
     </div>

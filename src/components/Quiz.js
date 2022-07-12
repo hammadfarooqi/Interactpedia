@@ -3,8 +3,35 @@ import Header from "./Header"
 import {Grid} from "@mui/material"
 import { useState } from "react"
 
-function nextQs(qs,questions, Passed) {
+function nextQuestion(questions, current, setCurrent, topics, setIsCorrect) {
+  setIsCorrect(-1)
+
+  var choice = 0
+  if (choice === current) {
+    choice = 1
+  }
+
+  var worstTopic = topics[0].topic
+  var accuracy = 1
+
+  // Make the target topic topic the one with the worst accuracy
+  topics.map((topic) => topic.answered !==0 ? (topic.correct/topic.answered < accuracy ? (accuracy=topic.correct/topic.answered, worstTopic=topic.topic) : worstTopic=worstTopic) : worstTopic=worstTopic)
+
+  // If there are still topics with 0 questions answered, those topics become the target topic
+  topics.map((topic) => topic.answered === 0 ? worstTopic=topic.topic : worstTopic=worstTopic)
+
+  // Choosing a random question of the worstTopic
+  var choices = []
+  questions.map((question) => question.topic === worstTopic ? (question.index !== current ? choices.push(question.index) : worstTopic=worstTopic) : worstTopic=worstTopic)
   
+  console.log(choices)
+  if (choices.length>0) {
+    choice = choices[Math.floor(Math.random()*choices.length)]
+  } else {
+    console.log("choices array empty")
+  }
+
+  setCurrent(choice)
 }
 
 const Quiz = ({questions, topics, setTopics}) => {
@@ -23,6 +50,10 @@ const Quiz = ({questions, topics, setTopics}) => {
             topic={questions[current].topic}
             topics={topics}
             setTopics={setTopics}
+            nextQuestion={nextQuestion}
+            questions={questions}
+            current={current}
+            setCurrent={setCurrent}
           />
       </Grid>
   </Grid>
