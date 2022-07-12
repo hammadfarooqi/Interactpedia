@@ -15,14 +15,19 @@ function nextQuestion(questions, current, setCurrent, topics, setIsCorrect) {
   var accuracy = 1
 
   // Make the target topic topic the one with the worst accuracy
-  topics.map((topic) => topic.answered !==0 ? (topic.correct/topic.answered < accuracy ? (accuracy=topic.correct/topic.answered, worstTopic=topic.topic) : worstTopic=worstTopic) : worstTopic=worstTopic)
+  topics.map((topic) => topic.answered !==0 ? (topic.correct/topic.answered < accuracy ? (accuracy=topic.correct/topic.answered, worstTopic=topic.topic) : null) : null)
+  
+  // If there is a topic with 3 or more less questions answered, that becomes the target topic
+  var maxAnswered = 0
+  topics.map((topic) => topic.answered > maxAnswered ? maxAnswered=topic.answered : null) 
+  topics.map((topic) => topic.answered < maxAnswered-2 ? worstTopic=topic.topic : null)
 
   // If there are still topics with 0 questions answered, those topics become the target topic
-  topics.map((topic) => topic.answered === 0 ? worstTopic=topic.topic : worstTopic=worstTopic)
+  topics.map((topic) => topic.answered === 0 ? worstTopic=topic.topic : null)
 
   // Choosing a random question of the worstTopic
   var choices = []
-  questions.map((question) => question.topic === worstTopic ? (question.index !== current ? choices.push(question.index) : worstTopic=worstTopic) : worstTopic=worstTopic)
+  questions.map((question) => question.topic === worstTopic ? (question.index !== current ? choices.push(question.index) : null) : null)
   
   console.log(choices)
   if (choices.length>0) {
