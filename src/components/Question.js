@@ -4,6 +4,8 @@ import CancelIcon from '@mui/icons-material/Cancel';
 import { useState } from "react"
 import { red, green } from "@mui/material/colors";
 import Box from '@mui/material/Box';
+import win from '../Audio/win.mp3';
+import lose from '../Audio/lose.mp3';
 
 function validate(correctAnswer, category, setIsCorrect, topic, topics, setTopics) {
   if (correctAnswer === category){
@@ -22,6 +24,7 @@ const Question = ({prompt, answers, correct, topic, topics, setTopics, nextQuest
   const [isCorrect, setIsCorrect] = useState(-1)
   const [showHint, setShowHint] = useState(false);
   return (
+
     <div>
       <Card>
         <CardHeader 
@@ -84,11 +87,14 @@ const Question = ({prompt, answers, correct, topic, topics, setTopics, nextQuest
         {showHint && <Box sx={{margin:2}} id='hint'>Section to Read: {topic}</Box>}
         <Grid xs={12}>
           {isCorrect === 1 && <CheckCircleIcon sx={{ color: green[500], fontSize: 100}} />}
+          {isCorrect === 1 && <audio  autoplay="true"><source src={win} type="audio/mpeg"/></audio>}
           {isCorrect === 0 && <CancelIcon sx={{ color: red[500], fontSize: 100 }}/>}
+          {isCorrect === 0 && <audio  autoplay="true"><source src={lose} type="audio/mpeg"/></audio>}
         </Grid>
         {isCorrect === 0 && 
-          <CardContent>
+          <CardContent > <b>
             The correct answer is {correct}
+            </b>
           </CardContent>
         }
         <Grid xs={12}>
