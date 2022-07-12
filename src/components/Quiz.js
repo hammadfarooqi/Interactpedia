@@ -1,6 +1,7 @@
 import Question from "./Question"
 import Header from "./Header"
 import {Grid} from "@mui/material"
+import { useState } from "react"
 
 const Quiz = ({questions}) => {
     const [question, setQuestion] = useState(0)
