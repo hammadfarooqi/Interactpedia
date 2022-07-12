@@ -3,8 +3,6 @@ import Header from "./Header"
 import {Grid} from "@mui/material"
 
 const Quiz = ({questions}) => {
-    const [question, setQuestion] = useState(0)
-
     return (
     <Grid container spacing = {2}>
         <Grid item sm={12} md={12} lg={12}>
