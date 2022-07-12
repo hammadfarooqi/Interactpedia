@@ -7,10 +7,24 @@ import { red, green } from "@mui/material/colors";
 
 
 // test 2
+function validate(correct, category, setIsCorrect) {
+  if (correct === category){
+    setIsCorrect(1)
+    // document.getElementById("answer-choice").style.display = "none";
+    // return 
+    // <CheckCircleIcon sx={{ color: green[500], fontSize: 200 }}/>
+  }
+  else{
+    setIsCorrect(0)
+    // document.getElementById("answer-choice").style.display = "none";
+    // return <CancelIcon sx={{ color: red[500], fontSize: 200 }}/>
+  }
+}
 
 
 const Question = ({prompt, answers, correct, topic}) => {
   const [category, setCategory] = useState('A')
+  const [isCorrect, setIsCorrect] = useState(-1)
   return (
     <div>
       <Card>
@@ -42,21 +56,16 @@ const Question = ({prompt, answers, correct, topic}) => {
 
           </FormControl>
           <Grid xs={12}>
-            <Button type="submit" variant="outlined" onClick = {({correct}) => (category==correct) ? console.log(category):console.log(category)}>
+            <Button type="submit" variant="outlined" onClick = {(correct, category) => validate(correct, category, setIsCorrect)}>
               Submit
             </Button>
 
-            <CheckCircleIcon sx={{ color: green[500], fontSize: 200 }}>
-             
-            </CheckCircleIcon>
-
-            <CancelIcon sx={{ color: red[500], fontSize: 200 }}>
-              
-            </CancelIcon> 
 
           </Grid>
         </CardContent>
       </Card>
+      {isCorrect === 1 && <CheckCircleIcon sx={{ color: green[500], fontSize: 200 }}/>}
+      {isCorrect === 0 && <CancelIcon sx={{ color: red[500], fontSize: 200 }}/>}
     </div>
   )
 }
