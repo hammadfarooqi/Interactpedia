@@ -1,11 +1,10 @@
-import { Card, FormControl, FormLabel, CardHeader, FormControlLabel, CardContent, Radio, RadioGroup, Grid, Button, TextField} from "@mui/material"
+import { Card, FormControl, FormLabel, CardHeader, FormControlLabel, CardContent, Radio, RadioGroup, Grid, Button, Spacing} from "@mui/material"
 import CheckCircleIcon from '@mui/icons-material/CheckCircle';
 import CancelIcon from '@mui/icons-material/Cancel';
 import { useState } from "react"
 import { red, green } from "@mui/material/colors";
 import Box from '@mui/material/Box';
 import { typography } from '@mui/system';
-
 
 
 
@@ -30,6 +29,7 @@ const Question = ({prompt, answers, correct, topic}) => {
   const [category, setCategory] = useState('A')
   const [isCorrect, setIsCorrect] = useState(-1)
   const [show, setShow] = useState(false);
+  const [passed, setPassed] = useState(false);
   return (
     <div>
       <Card>
@@ -68,10 +68,17 @@ const Question = ({prompt, answers, correct, topic}) => {
           </Grid>
         </CardContent>
       </Card>
-      {isCorrect === 1 && <CheckCircleIcon sx={{ color: green[500], fontSize: 200 }}/>}
-      {isCorrect === 0 && <CancelIcon sx={{ color: red[500], fontSize: 200 }}/>}
-      <Button variant="text" onClick =  {() => setShow(prev => !prev)}>Hint</Button>
-      {show && <Box id='hint'>Section to Read: {topic}</Box>}
+      <Card>
+        <Grid xs={12}>
+          {isCorrect === 1 && <CheckCircleIcon sx={{ color: green[500], fontSize: 200}} />}
+          {isCorrect === 0 && <CancelIcon sx={{ color: red[500], fontSize: 200 }}/>}
+        </Grid>
+        <Button variant="text" onClick =  {() => setShow(prev => !prev)}>Hint</Button>
+        {show && <Box id='hint'>Section to Read: {topic}</Box>}
+        <Grid xs={12}>
+          {isCorrect === 1 && <Button variant="contained" onClick={()=> setPassed(true)} sx={{margin: 2}} >Next Question </Button>}
+        </Grid>
+      </Card>
     </div>
   )
 }
