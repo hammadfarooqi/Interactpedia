@@ -43,28 +43,28 @@ const Question = ({prompt, answers, correct, topic, topics, setTopics, nextQuest
               {/* <Grid container={0} align = "center" direction="column" justify="center"> */}
               <Grid container>
                 <Grid item xs={6} sm={6} md={6} lg={6}>
-                  <Card>
+                  <Card style={{ border: "none", boxShadow: "none" }}>
                     <CardContent>
                       <FormControlLabel value="A" control={<Radio />} label={answers[0]} />
                     </CardContent>
                   </Card>
                 </Grid>
                 <Grid item xs={6} sm={6} md={6} lg={6}>
-                  <Card>
+                  <Card style={{ border: "none", boxShadow: "none" }}>
                     <CardContent>
                       <FormControlLabel value="B" control={<Radio />} label={answers[1]} />
                     </CardContent>
                   </Card>
                 </Grid>
                 <Grid item xs={6} sm={6} md={6} lg={6}>
-                  <Card>
+                  <Card style={{ border: "none", boxShadow: "none" }}>
                     <CardContent>
                       <FormControlLabel value="C" control={<Radio />} label={answers[2]} />
                     </CardContent>
                   </Card>
                 </Grid>
                 <Grid item xs={6} sm={6} md={6} lg={6}>
-                  <Card>
+                  <Card style={{ border: "none", boxShadow: "none" }}>
                     <CardContent>
                       <FormControlLabel value="D" control={<Radio />} label={answers[3]} />
                     </CardContent>
@@ -92,7 +92,7 @@ const Question = ({prompt, answers, correct, topic, topics, setTopics, nextQuest
           {isCorrect === 0 && <audio  autoplay="true"><source src={lose} type="audio/mpeg"/></audio>}
         </Grid>
         {isCorrect === 0 && 
-          <CardContent > <b>
+          <CardContent sx={{color:red[500]}}> <b >
             The correct answer is {correct}
             </b>
           </CardContent>
