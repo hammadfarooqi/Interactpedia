@@ -15,31 +15,53 @@ export const qs = [
 
     },
     {
-        prompt: "Which of the following is not a likely risk?",
-        answers: ["Onboard vehicle microphones being used for eavesdropping", "A malicious compact disc being used as an attack vector", "Remotely carjacking and driving a vehicle into a ditch", "Remotely accessing and turning off a vehicle engine"],
+        prompt: "What actions are being undertaken to reduce the threat of air navigation hacking?",
+        answers: ["A. Increasing cyber security", "B. Increasing redundancy in aircraft systems", "C. Increase range of radar surveillance ", "D. Air navigation service providers are moving to their own network"],
         correct: 'D',
-        topic: "Automobiles",
+        topic: "Aviation",
         index: 2
+
     },
     {
-        prompt: "Automobile question?",
-        answers: ["correct", "not", "not", "not"],
-        correct: 'A',
+        prompt: "Which of the following is not a likely risk?",
+        answers: ["A. Onboard vehicle microphones being used for eavesdropping", "B. A malicious compact disc being used as an attack vector", "C. Remotely carjacking and driving a vehicle into a ditch", "D. Remotely accessing and turning off a vehicle engine"],
+        correct: 'D',
         topic: "Automobiles",
         index: 3
     },
     {
-        prompt: "Internet of things and physical vulnerabilities question?",
-        answers: ["not", "correct", "not", "not"],
+        prompt: "What actions has Tesla taken to prevent automobile hacking?",
+        answers: ["A. Produce cars with better security", "B. Send a software patch into their cars", "C. Create uniform policies for their cars", "D. Reduce their cars' dependancy on the Internet"],
         correct: 'B',
-        topic: "Internet of things and physical vulnerabilities",
+        topic: "Automobiles",
         index: 4
     },
     {
-        prompt: "Internet of things and physical vulnerabilities question number 2?",
-        answers: ["not", "not", "correct", "not"],
+        prompt: "How many miles away were hackers able to carjack a vehicle in 2015?",
+        answers: ["A. 10", "B. 15", "C. 12", "D. 8"],
+        correct: 'A',
+        topic: "Automobiles",
+        index: 5
+    },
+    {
+        prompt: "What is the Internet of things?",
+        answers: ["A. 5G mobile data", "B. A network of various physical objects", "C. A group of computers connected to each other", "D. The World Wide Web"],
+        correct: 'B',
+        topic: "Internet of things and physical vulnerabilities",
+        index: 6
+    },
+    {
+        prompt: "What are cyber-kinetic attacks?",
+        answers: ["A. Simulations of kinetic energy", "B. Attacks by hackers on the run", "C. A cyber attack that targets infrastructure", "D. Distruction of an object with Internet access"],
         correct: 'C',
         topic: "Internet of things and physical vulnerabilities",
-        index: 5
+        index: 7
+    },
+    {
+        prompt: "What are cyber-kinetic attacks?",
+        answers: ["A. Simulations of kinetic energy", "B. Attacks by hackers on the run", "C. A cyber attack that targets infrastructure", "D. Distruction of an object with Internet access"],
+        correct: 'C',
+        topic: "Internet of things and physical vulnerabilities",
+        index: 8
     }
 ]
