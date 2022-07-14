@@ -6,7 +6,7 @@ import Box from '@mui/material/Box';
 import win from '../Audio/win.mp3';
 import lose from '../Audio/lose.mp3';
 import {green, red} from '@mui/material/colors';
-import '../App.css'
+import '../App.css';
 
 function validate(correctAnswer, category, setIsCorrect, topic, topics, setTopics) {
   if (correctAnswer === category){

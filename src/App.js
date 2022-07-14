@@ -46,7 +46,7 @@ function App() {
         </Grid>
         
         <Grid item sm={8} md={8} lg={8}>
-          <div style={{height:'75vh', overflow:'auto', padding:10, background:'blue'}}>
+          <div style={{height:'75vh', overflow:'auto', padding:10, }} className="TextBackground">
             <Grid container spacing = {2}>
               {parsed.map((paragraph) => (
                 paragraph.includes(".") ?
