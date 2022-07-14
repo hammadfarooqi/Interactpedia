@@ -6,6 +6,7 @@ import Quiz from "./components/Quiz"
 import Header from "./components/Header"
 import raw from "./article.txt"
 import {qs} from "./questions.js"
+import { red, green, blue } from "@mui/material/colors";
 
 function App() {
 
@@ -38,14 +39,14 @@ function App() {
 
 
   return (
-    <div className="App">
+    <div className="Background">
       <Grid container padding={1} spacing = {1}>
         <Grid item sm={12} md={12} lg={12}>
-          <Header title={title} isTitle={true}/>
+          <Header  title={title} isTitle={true}/>
         </Grid>
         
         <Grid item sm={8} md={8} lg={8}>
-          <div style={{height:'75vh', overflow:'auto', padding:10}}>
+          <div style={{height:'75vh', overflow:'auto', padding:10, background:'blue'}}>
             <Grid container spacing = {2}>
               {parsed.map((paragraph) => (
                 paragraph.includes(".") ?

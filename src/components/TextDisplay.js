@@ -5,8 +5,8 @@ import Typography from '@mui/material/Typography'
 
 const TextDisplay = ( {text} ) => {
   return (
-    <div>
-      <Card>
+    <div  >
+      <Card style={{background:"red"}}>
         {/* <CardHeader 
           title = {title}
         /> */}

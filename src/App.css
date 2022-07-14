@@ -37,3 +37,12 @@
   }
 }
 
+.Background {
+  background-color: #fbb361;
+  text-align: center;
+}
+
+.CardBackground {
+  background-color: #fb61c8;
+  text-align: center;
+}
