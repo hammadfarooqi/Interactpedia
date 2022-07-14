@@ -2,10 +2,11 @@ import { Card, FormControl, FormLabel, CardHeader, FormControlLabel, CardContent
 import CheckCircleIcon from '@mui/icons-material/CheckCircle';
 import CancelIcon from '@mui/icons-material/Cancel';
 import { useState } from "react"
-import { red, green } from "@mui/material/colors";
 import Box from '@mui/material/Box';
 import win from '../Audio/win.mp3';
 import lose from '../Audio/lose.mp3';
+import {green, red} from '@mui/material/colors';
+import '../App.css';
 
 function validate(correctAnswer, category, setIsCorrect, topic, topics, setTopics) {
   if (correctAnswer === category){
@@ -26,7 +27,7 @@ const Question = ({prompt, answers, correct, topic, topics, setTopics, nextQuest
   return (
 
     <div>
-      <Card>
+      <Card class="CardBackground">
         <CardHeader 
           title = {prompt}
         />
@@ -43,28 +44,28 @@ const Question = ({prompt, answers, correct, topic, topics, setTopics, nextQuest
               {/* <Grid container={0} align = "center" direction="column" justify="center"> */}
               <Grid container>
                 <Grid item xs={6} sm={6} md={6} lg={6}>
-                  <Card style={{ border: "none", boxShadow: "none" }}>
+                  <Card style={{ border: "none", boxShadow: "none", borderRadius: 0}} class="CardBackground">
                     <CardContent>
                       <FormControlLabel value="A" control={<Radio />} label={answers[0]} />
                     </CardContent>
                   </Card>
                 </Grid>
                 <Grid item xs={6} sm={6} md={6} lg={6}>
-                  <Card style={{ border: "none", boxShadow: "none" }}>
+                  <Card style={{ border: "none", boxShadow: "none", borderRadius:0}} class="CardBackground">
                     <CardContent>
                       <FormControlLabel value="B" control={<Radio />} label={answers[1]} />
                     </CardContent>
                   </Card>
                 </Grid>
                 <Grid item xs={6} sm={6} md={6} lg={6}>
-                  <Card style={{ border: "none", boxShadow: "none" }}>
+                  <Card style={{ border: "none", boxShadow: "none",borderRadius:0}} class="CardBackground">
                     <CardContent>
                       <FormControlLabel value="C" control={<Radio />} label={answers[2]} />
                     </CardContent>
                   </Card>
                 </Grid>
                 <Grid item xs={6} sm={6} md={6} lg={6}>
-                  <Card style={{ border: "none", boxShadow: "none" }}>
+                  <Card style={{ border: "none", boxShadow: "none",borderRadius:0}} class="CardBackground">
                     <CardContent>
                       <FormControlLabel value="D" control={<Radio />} label={answers[3]} />
                     </CardContent>
@@ -82,7 +83,7 @@ const Question = ({prompt, answers, correct, topic, topics, setTopics, nextQuest
           </Grid>
         </CardContent>
       </Card>
-      <Card>
+      <Card class="CardBackground">
         {isCorrect === -1 && <Button variant="text" onClick =  {() => setShowHint(prev => !prev)}>Hint</Button>}
         {showHint && <Box sx={{margin:2}} id='hint'>Section to Read: {topic}</Box>}
         <Grid xs={12}>

@@ -1,12 +1,13 @@
-import Card from '@mui/material/Card'
-import CardHeader from '@mui/material/CardHeader'
-import CardContent from '@mui/material/CardContent'
-import Typography from '@mui/material/Typography'
+import Card from '@mui/material/Card';
+import CardHeader from '@mui/material/CardHeader';
+import CardContent from '@mui/material/CardContent';
+import Typography from '@mui/material/Typography';
+import '../App.css';
 
 const TextDisplay = ( {text} ) => {
   return (
-    <div>
-      <Card>
+    <div  >
+      <Card style={{borderRadius:0, background: "black", color:"white"}} >
         {/* <CardHeader 
           title = {title}
         /> */}

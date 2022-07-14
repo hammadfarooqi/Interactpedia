@@ -37,3 +37,22 @@
   }
 }
 
+.Background {
+  background-color: #193163;
+  text-align: center;
+  color: aliceblue;
+}
+
+.CardBackground {
+  background-color: #611ce0;
+  text-align: center;
+}
+
+.TextBackground {
+  background-color: #193163;
+  background-color: #1b08bd;
+}
+
+.ReadBackground {
+  background-color: #61dafb;
+}
