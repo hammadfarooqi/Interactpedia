@@ -3,8 +3,9 @@ import Header from "./Header"
 import {Grid} from "@mui/material"
 import { useState } from "react"
 
-function nextQuestion(questions, current, setCurrent, topics, setIsCorrect) {
+function nextQuestion(questions, current, setCurrent, topics, setIsCorrect, setShowHint) {
   setIsCorrect(-1)
+  setShowHint(false)
 
   var choice = 0
   if (choice === current) {
@@ -29,7 +30,7 @@ function nextQuestion(questions, current, setCurrent, topics, setIsCorrect) {
   var choices = []
   questions.map((question) => question.topic === worstTopic ? (question.index !== current ? choices.push(question.index) : null) : null)
   
-  console.log(choices)
+  // console.log(choices)
   if (choices.length>0) {
     choice = choices[Math.floor(Math.random()*choices.length)]
   } else {

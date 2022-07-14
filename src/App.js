@@ -11,23 +11,29 @@ function App() {
 
   const [title, setTitle] = useState("")
   const [parsed, setParsed] = useState([])
-  const [topics, setTopics] = useState([
-    {
-      topic: "Aviation",
-      answered: 0,
-      correct: 0
-    },
-    {
-      topic: "Automobiles",
-      answered: 0,
-      correct: 0
-    },
-    {
-      topic: "Internet of things and physical vulnerabilities",
-      answered: 0,
-      correct: 0
-    }
-  ])
+  
+  var topicNames = []
+  var topicsVar = []
+  qs.map((q) => topicNames.includes(q.topic) ? null : (topicNames.push(q.topic)))
+  topicNames.map((name) => topicsVar.push({topic: name, answered: 0, correct: 0}))
+  const [topics, setTopics] = useState(topicsVar)
+  //   [
+  //   {
+  //     topic: "Aviation",
+  //     answered: 0,
+  //     correct: 0
+  //   },
+  //   {
+  //     topic: "Automobiles",
+  //     answered: 0,
+  //     correct: 0
+  //   },
+  //   {
+  //     topic: "Internet of things and physical vulnerabilities",
+  //     answered: 0,
+  //     correct: 0
+  //   }
+  // ])
 
   fetch(raw)
   .then(r => r.text())
