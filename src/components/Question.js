@@ -98,7 +98,7 @@ const Question = ({prompt, answers, correct, topic, topics, setTopics, nextQuest
           </CardContent>
         }
         <Grid xs={12}>
-          {isCorrect !== -1 && <Button variant="contained" onClick={()=> nextQuestion(questions, current, setCurrent, topics, setIsCorrect)} sx={{margin: 2}} >Next Question </Button>}
+          {isCorrect !== -1 && <Button variant="contained" onClick={()=> nextQuestion(questions, current, setCurrent, topics, setIsCorrect, setShowHint)} sx={{margin: 2}} >Next Question </Button>}
         </Grid>
       </Card>
     </div>
