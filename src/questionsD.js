@@ -1,6 +1,6 @@
 export const qs = [
   {
-    prompt: "With what technique can partial differential equations be solved in which all dimensions except one are represented?",
+    prompt: "With what technique can partial differential equations be solved in which all dimensions except one are discretized?",
     answers: ["A. finite element method", "B. gradient discretization method", "C. spectral method", "D. method of lines"],
     correct: 'D',
     topic: "Method of lines",
@@ -8,7 +8,7 @@ export const qs = [
   },
   {
     prompt: "What have some integration routines consisting of method of lines been published as?",
-    answers: ["A. closed source resources", "B. open source resources", "C. ", "D. "],
+    answers: ["A. open data", "B. open source resources", "C. open methods", "D. open processes"],
     correct: 'B',
     topic: "Method of lines",
     index: 1
@@ -29,7 +29,7 @@ export const qs = [
   },
   {
     prompt: "What are two areas in which spectral methods are used?",
-    answers: ["A. applied mathematics and biology", "B. scientific computing and biology", "C. scientific computing and applied mathematics", "D. applied mathematics and physics"],
+    answers: ["A. applied mathematics and biology", "B. scientific computing and chemistry", "C. scientific computing and applied mathematics", "D. applied mathematics and physics"],
     correct: 'C',
     topic: "Spectral method",
     index: 4
