@@ -7,8 +7,8 @@ export const qs = [
         index: 0
     },
     {
-        prompt: "What is considered the worst sin in romanticism?",
-        answers: ["A. Clouding your feelings", "B. Being derivative/unoriginal", "C. Creating selfish art", "D. Not referencing nature"],
+        prompt: "The idea of avoiding the worst sin of Romanticism is known as",
+        answers: ['A. "romantic authenticity"', 'B. "romantic originality', 'C. "romantic creativity"', 'D. "romantic inspiration"'],
         correct: 'B',
         topic: "Basic characteristics",
         index: 1
@@ -28,16 +28,16 @@ export const qs = [
         index: 3
     },
     {
-        prompt: "From when did Romanticism certainly knew itself by its name?",
+        prompt: "From when did Romanticism certainly know itself by its name?",
         answers: ["A. 1800s", "B. 1810s", "C. 1820s", "D. 1830s"],
         correct: 'C',
         topic: "Etymology",
         index: 4
     },
     {
-        prompt: 'The modern sense of the term "Romantic" spread in France due to use by Germaine de Staël recounting her travels in',
-        answers: ["A. England", "B. France", "C. Germany", "D. Italy"],
-        correct: 'C',
+        prompt: 'Who recounted their adventures in Germany to spread the term "Romantic" to France?',
+        answers: ["A. Germaine de Stael", "B. August Wilhelm Schlegel", "C. Friedrich Schlegel", "D. Margaret Drabble"],
+        correct: 'A',
         topic: "Etymology",
         index: 5
     },
@@ -56,9 +56,9 @@ export const qs = [
         index: 7
     },
     {
-        prompt: "There were how many generations of Romantic artists?",
-        answers: ["A. 1", "B. 2", "C. 3", "D. 4"],
-        correct: 'C',
+        prompt: "What emerged in the 1790s and 1800s?",
+        answers: ["A. The first generation of Romantic artists", "B. The second generation of Romantic artists", "C. The third generation of Romantic artists", "D. The fourth generation of Romantic artists"],
+        correct: 'A',
         topic: "Period",
         index: 8
     },
