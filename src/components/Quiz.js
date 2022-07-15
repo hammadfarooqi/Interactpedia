@@ -44,7 +44,7 @@ const Quiz = ({questions, topics, setTopics}) => {
   const [current, setCurrent] = useState(0)
 
   return (
-  <div style={{height:'75vh', overflow:'auto'}}>
+  <div className = "QuizBackground" style={{height:'75vh', borderRadius:"10px", overflow:"scroll" , background:"#173753"}}>
     <Grid container spacing = {2}>
         <Grid item sm={12} md={12} lg={12}>
             <Header title="Check Understanding!" />

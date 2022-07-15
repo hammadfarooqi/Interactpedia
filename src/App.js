@@ -71,7 +71,7 @@ function App() {
           </div>
         </Grid>
         <Grid item sm={4} md={4} lg={4}>
-          <Quiz 
+          <Quiz className="CardBackground"
             questions={qs} 
             topics={topics}
             setTopics={setTopics}
