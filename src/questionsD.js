@@ -42,24 +42,24 @@ export const qs = [
     index: 5
   },
   {
-    prompt: "Which of these groups of methods include only overlapping domain decomposition methods?"
-    answers: ["A. Schwarz alternating method and additive Schwarz method", "B. abstract additive Schwarz method and Schwarz alternating method", "C. Schwarz method and BDDC", "D. Feti-DP and Lagrange multipliers"] 
-    correct: 'A'
-    topic: "Domain decomposition methods"
+    prompt: "Which of these groups of methods include only overlapping domain decomposition methods?",
+    answers: ["A. Schwarz alternating method and additive Schwarz method", "B. abstract additive Schwarz method and Schwarz alternating method", "C. Schwarz method and BDDC", "D. Feti-DP and Lagrange multipliers"], 
+    correct: 'A',
+    topic: "Domain decomposition methods",
     index: 6
   },
   {
-    prompt: "What happens to subdomains in non-overlapping domain decomposition methods?"
-    answers: ["A. they overlap by more than just their interface", "B. they intersect only on their interface", "C. nothing happens to them", "D. they intersect using the GMRES"]
-    correct: 'B'
-    topic: "Domain decomposition methods"
+    prompt: "What happens to subdomains in non-overlapping domain decomposition methods?",
+    answers: ["A. they overlap by more than just their interface", "B. they intersect only on their interface", "C. nothing happens to them", "D. they intersect using the GMRES"],
+    correct: 'B',
+    topic: "Domain decomposition methods",
     index: 7
   },
   {
-    prompt: "What is another name for non-overlapping domain decomposition methods?"
-    answers: ["A. additive Schwarz method", "B. abstract method", "C. iterative substructuring methods", "D. domain decomposition methods"]
-    correct: 'C'
-    topic: "Domain decomposition methods"
+    prompt: "What is another name for non-overlapping domain decomposition methods?",
+    answers: ["A. additive Schwarz method", "B. abstract method", "C. iterative substructuring methods", "D. domain decomposition methods"],
+    correct: 'C',
+    topic: "Domain decomposition methods",
     index: 8
   }
 ]
