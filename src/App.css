@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
+
 .App {
   text-align: center;
 }
@@ -14,7 +16,7 @@
 }
 
 .App-header {
-  background-color: #282c34;
+  
   min-height: 100vh;
   display: flex;
   flex-direction: column;
@@ -38,21 +40,44 @@
 }
 
 .Background {
-  background-color: #193163;
+  background-color: #2892D7;
   text-align: center;
   color: aliceblue;
+  font-family: 'Open Sans', sans-serif;
 }
 
 .CardBackground {
-  background-color: #611ce0;
+  background-color: #173753;
   text-align: center;
+  border-radius: 10px;
 }
 
 .TextBackground {
-  background-color: #193163;
-  background-color: #1b08bd;
+  background-color: #173753;
+  border-radius: 10px;
 }
 
 .ReadBackground {
   background-color: #61dafb;
+  font-weight: bold;
+}
+
+/* Hide scrollbar for Chrome, Safari and Opera */
+.TextBackground::-webkit-scrollbar {
+  display: none;
+}
+
+/* Hide scrollbar for IE, Edge and Firefox */
+.TextBackground {
+  -ms-overflow-style: none;  /* IE and Edge */
+  scrollbar-width: none;  /* Firefox */
+}
+.QuizBackground::-webkit-scrollbar {
+  display: none;
+}
+
+/* Hide scrollbar for IE, Edge and Firefox */
+.QuizBackground {
+  -ms-overflow-style: none;  /* IE and Edge */
+  scrollbar-width: none;  /* Firefox */
 }

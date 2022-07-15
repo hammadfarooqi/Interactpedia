@@ -33,7 +33,7 @@ const Question = ({prompt, answers, correct, topic, topics, setTopics, nextQuest
         />
         <CardContent>
           <FormControl >
-            <FormLabel id="answer-choice">Answer Options</FormLabel>
+            <FormLabel id="answer-choice" style ={{color: "lightblue", overflow: "hidden"}}>Answer Options</FormLabel>
 
             <RadioGroup
               aria-labelledby="demo-radio-buttons-group-label"
