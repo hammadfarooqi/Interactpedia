@@ -4,8 +4,8 @@ import {Grid} from "@mui/material"
 import TextDisplay from "./components/TextDisplay"
 import Quiz from "./components/Quiz"
 import Header from "./components/Header"
-import raw from "./articleB.txt"
-import {qs} from "./questionsB.js"
+import raw from "./articleD.txt"
+import {qs} from "./questionsD.js"
 import { red, green, blue } from "@mui/material/colors";
 
 function App() {
