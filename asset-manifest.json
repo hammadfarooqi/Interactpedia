@@ -1,0 +1,16 @@
+{
+  "files": {
+    "main.css": "/Engaging-Crowd-Sourced-Platform/static/css/main.7cf42a43.css",
+    "main.js": "/Engaging-Crowd-Sourced-Platform/static/js/main.d945100a.js",
+    "static/media/lose.mp3": "/Engaging-Crowd-Sourced-Platform/static/media/lose.421240107af64d965b96.mp3",
+    "static/media/win.mp3": "/Engaging-Crowd-Sourced-Platform/static/media/win.0101814faf0e69c62a2f.mp3",
+    "static/media/article.txt": "/Engaging-Crowd-Sourced-Platform/static/media/article.42e8f7c82b9e12ec7cc0.txt",
+    "index.html": "/Engaging-Crowd-Sourced-Platform/index.html",
+    "main.7cf42a43.css.map": "/Engaging-Crowd-Sourced-Platform/static/css/main.7cf42a43.css.map",
+    "main.d945100a.js.map": "/Engaging-Crowd-Sourced-Platform/static/js/main.d945100a.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.7cf42a43.css",
+    "static/js/main.d945100a.js"
+  ]
+}
