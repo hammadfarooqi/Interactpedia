@@ -1,7 +1,7 @@
 {
   "name": "crowd-sourced-platform",
   "version": "0.1.0",
-  "homepage": "https://hammadfarooqi.github.io/Engaging-Crowd-Sourced-Platform",
+  "homepage": "https://hammadfarooqi.github.io/Interactpedia",
   "private": true,
   "dependencies": {
     "@emotion/react": "^11.9.3",
