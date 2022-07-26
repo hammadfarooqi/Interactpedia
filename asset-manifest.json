@@ -1,16 +1,16 @@
 {
   "files": {
-    "main.css": "/Interactpedia/static/css/main.7cf42a43.css",
-    "main.js": "/Interactpedia/static/js/main.b91319c6.js",
-    "static/media/lose.mp3": "/Interactpedia/static/media/lose.421240107af64d965b96.mp3",
-    "static/media/win.mp3": "/Interactpedia/static/media/win.0101814faf0e69c62a2f.mp3",
-    "static/media/article.txt": "/Interactpedia/static/media/article.42e8f7c82b9e12ec7cc0.txt",
-    "index.html": "/Interactpedia/index.html",
-    "main.7cf42a43.css.map": "/Interactpedia/static/css/main.7cf42a43.css.map",
-    "main.b91319c6.js.map": "/Interactpedia/static/js/main.b91319c6.js.map"
+    "main.css": "/static/css/main.7cf42a43.css",
+    "main.js": "/static/js/main.f6b03e82.js",
+    "static/media/lose.mp3": "/static/media/lose.421240107af64d965b96.mp3",
+    "static/media/win.mp3": "/static/media/win.0101814faf0e69c62a2f.mp3",
+    "static/media/article.txt": "/static/media/article.42e8f7c82b9e12ec7cc0.txt",
+    "index.html": "/index.html",
+    "main.7cf42a43.css.map": "/static/css/main.7cf42a43.css.map",
+    "main.f6b03e82.js.map": "/static/js/main.f6b03e82.js.map"
   },
   "entrypoints": [
     "static/css/main.7cf42a43.css",
-    "static/js/main.b91319c6.js"
+    "static/js/main.f6b03e82.js"
   ]
 }
