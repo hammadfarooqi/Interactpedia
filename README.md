@@ -1,6 +1,6 @@
 # Interactpedia
 
-_Interactpedia_ is a frontend web application that models how engagement features can seamlessly be incorporated into crowdsourcing platforms to imrove info retention for users.
+_Interactpedia_ is a frontend web application that models how engagement features can be incorporated into crowdsourcing platforms to improve info retention for users without compromising the contributor experience.
 
 To check a currently deployed version of Interactpedia, please visit [www.interactpedia.com](https://www.interactpedia.com/).
 
