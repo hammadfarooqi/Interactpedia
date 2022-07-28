@@ -1,70 +1,43 @@
-# Getting Started with Create React App
+# Interactpedia
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+_Interactpedia_ is a frontend web application that models how engagement features can seamlessly be incorporated into crowdsourcing platforms to imrove info retention for users.
 
-## Available Scripts
+To check a currently deployed version of Interactpedia, please visit [www.interactpedia.com](https://www.interactpedia.com/).
 
-In the project directory, you can run:
+**Note:** It is recommended you run RendeYou either on Chrome or Firefox. Running this web app on Safari is undefined behavior.
 
-### `npm start`
+## Table of Contents
+- [Features](https://github.com/hammadfarooqi/Interactpedia/#features)
+- [Technologies](https://github.com/hammadfarooqi/Interactpedia/#technologies)
+- [Setup](https://github.com/hammadfarooqi/Interactpedia/#setup)
+- [Authors](https://github.com/hammadfarooqi/Interactpedia/#authors)
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+## Features
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+- 
 
-### `npm test`
+## Technologies
+ - Javascript <img src="https://seeklogo.com/images/J/javascript-logo-8892AEFCAC-seeklogo.com.png" alt="javascript" width="30px">
+ - React.js <img src="https://cdn4.iconfinder.com/data/icons/logos-3/600/React.js_logo-512.png" alt="react.js" width="30px">
+ - Material UI <img src="https://v4.mui.com/static/logo.png" alt="MUI" height="30px">
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## Setup
+In order to run a local instance of Interactpedia, first clone or download a copy of this repository and follow the instructions below.
 
-### `npm run build`
+To setup the dependencies for the application, run:
+```
+npm install
+```
+which should download a set of `node_modules` for the backend server.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+### Running
+To start the application, run:
+```
+npm start
+```
+The frontend will be available on http://localhost:3000, which should appear in your browser automatically and reload upon any changes.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+## Authors
+_Interactpedia_ was made as a research model for _Modeling the Effects of Engagement Methods in Online Crowdsourcing Platforms_ by Rajoshi Basu, Bryan Braga, Hammad Farooqi, & Yechan Lee with mentorship from Dr. Aaron Mazzeo.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+**Made by**: Hammad Farooqi & Yechan Lee.
