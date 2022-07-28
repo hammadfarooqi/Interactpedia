@@ -21,6 +21,7 @@ To check a currently deployed version of Interactpedia, please visit [www.intera
 
 ## Technologies
  - Javascript <img src="https://seeklogo.com/images/J/javascript-logo-8892AEFCAC-seeklogo.com.png" alt="javascript" width="30px">
+ - Node.js <img src="https://seeklogo.com/images/N/nodejs-logo-FBE122E377-seeklogo.com.png" alt="node.js" width="30px">
  - React.js <img src="https://cdn4.iconfinder.com/data/icons/logos-3/600/React.js_logo-512.png" alt="react.js" width="30px">
  - Material UI <img src="https://v4.mui.com/static/logo.png" alt="MUI" height="30px">
 
