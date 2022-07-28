@@ -4,7 +4,7 @@ _Interactpedia_ is a frontend web application that models how engagement feature
 
 To check a currently deployed version of Interactpedia, please visit [www.interactpedia.com](https://www.interactpedia.com/).
 
-**Note:** It is recommended you run RendeYou either on Chrome or Firefox. Running this web app on Safari is undefined behavior.
+**Note:** It is recommended you run Interactpedia desktop or tablet display sizes. Running on mobile display sizes may contain formatting issues.
 
 ## Table of Contents
 - [Features](https://github.com/hammadfarooqi/Interactpedia/#features)
