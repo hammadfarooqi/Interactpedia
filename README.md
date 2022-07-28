@@ -41,4 +41,6 @@ npm start
 The frontend will be available on http://localhost:3000, which should appear in your browser automatically and reload upon any changes.
 
 ## Authors
-_Interactpedia_ was made as a research model for _Modeling the Effects of Engagement Methods in Online Crowdsourcing Platforms_ by Rajoshi Basu, Bryan Braga, Hammad Farooqi, & Yechan Lee with mentorship from Dr. Aaron Mazzeo at the Rutgers University Governor’s School of New Jersey Program in Engineering & Technology. **Made by**: Hammad Farooqi & Yechan Lee.
+_Interactpedia_ was made as a research model for _Modeling the Effects of Engagement Methods in Online Crowdsourcing Platforms_ by Rajoshi Basu, Bryan Braga, Hammad Farooqi, & Yechan Lee with mentorship from Dr. Aaron Mazzeo at the Rutgers University Governor’s School of New Jersey Program in Engineering & Technology. 
+
+**Made by**: Hammad Farooqi & Yechan Lee.
