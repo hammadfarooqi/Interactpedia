@@ -2,10 +2,9 @@
 
 ![Interactpedia Screenshot](./src/ExampleScreenshot.png)
 
-
 _Interactpedia_ is a frontend web application that models how engagement features can be incorporated into crowdsourcing platforms to improve info retention for users without compromising the contributor experience.
 
-To check a currently deployed version of Interactpedia, please visit [www.interactpedia.com](https://www.interactpedia.com/).
+See Interactpedia deployed at [www.interactpedia.com](https://www.interactpedia.com/).
 
 **Note:** It is recommended you run Interactpedia on desktop or tablet display sizes. Running on mobile display sizes may contain formatting issues.
 
@@ -47,4 +46,4 @@ The frontend will be available on http://localhost:3000, which should appear in 
 ## Authors
 _Interactpedia_ was made as a research model for _Modeling the Effects of Engagement Methods in Online Crowdsourcing Platforms_ by Rajoshi Basu, Bryan Braga, Hammad Farooqi, & Yechan Lee with mentorship from Dr. Aaron Mazzeo at the Rutgers University Governor’s School of New Jersey Program in Engineering & Technology. 
 
-**Made by**: Hammad Farooqi & Yechan Lee.
+<!-- **Made by**: Hammad Farooqi & Yechan Lee. -->
